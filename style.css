@@ -203,3 +203,16 @@ body {
   border-bottom: 1px solid lightgrey;
   border-left: 1px solid lightgrey;
 }
+
+.filter-container fieldset{
+  color: tomato;
+  padding: 10px;
+}
+
+#filter-container input{
+  border: blueviolet; 
+}
+
+#filter-container label{
+  color: blue;
+}

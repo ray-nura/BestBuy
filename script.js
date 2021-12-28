@@ -7,7 +7,7 @@ const refresh = document.getElementById('refresh');
 const wrapper = document.querySelector('.wrapper');
 const result = document.querySelector('.result');
 const filterContainer = document.querySelector('.filter-container');
-const idFilterContainer = document.querySelector('#filter-container');
+const idFilterBrand = document.querySelector('#filter-brand');
 
 //  clearing and refresh page
 function refreshPage() {
@@ -16,18 +16,37 @@ function refreshPage() {
   while (result.hasChildNodes()) {
     result.removeChild(result.firstChild);
   }
-}
-//  show Filter Container on Left Side
-function filterContainerFn() {
-  for (let i = 0; i < data.length; i++) {
-    const listOfFilter = document.createElement('div');
-    listOfFilter.innerHTML = `
-        <input type="checkbox" id="${data[i].brand}" >
-        <label for="${data[i].brand}">${data[i].brand}</label><br>
-            `
-    idFilterContainer.appendChild(listOfFilter)
+  while (idFilterBrand.hasChildNodes()) {
+    idFilterBrand.removeChild(idFilterBrand.firstChild);
   }
 }
+//  FUNCTION TO show Filter Container on Left Side
+
+//  !!!! -- ALL BRAND ARRAY IN LEFT CONTAINER --- !!!!
+function filterBrandFn() {
+  // create an array of Brand Name
+  const dataBrand = [];
+  for (let i = 0; i < data.length; i++) {
+    const brandName = data[i].brand
+    if (!dataBrand.includes(brandName)) {
+      dataBrand.push(data[i].brand)
+      console.log(data[i].brand + data[i].idProduct)
+    }
+  }
+  // show in the left container array of Brand Name
+  for (let i = 0; i < dataBrand.length; i++) {
+    const listOfFilter = document.createElement('div');
+    listOfFilter.innerHTML = `
+        <input type="checkbox" id="${dataBrand[i]}" >
+        <label for="${dataBrand[i]}">${dataBrand[i]}</label><br>
+            `
+            idFilterBrand.appendChild(listOfFilter)
+  }
+}
+//  !!!! -- ALL RESOLUTION ARRAY IN LEFT CONTAINER --- !!!!
+
+
+
 // click and show By Category
 const showByCategory = (event) => {
   const item = event.target
@@ -52,9 +71,8 @@ const showByCategory = (event) => {
       result.appendChild(listOfResult)
     }
   }
-  filterContainerFn()
+  filterBrandFn()
 }
-
 
 //  function to show searched Product
 function searchProduct() {
@@ -71,6 +89,7 @@ function searchProduct() {
   //     }
   //     return newEl;
   // });
+
   // search data 
   const searchData = data.filter(el => {
     let valArr = Object.values(el);
