@@ -8,6 +8,7 @@ const wrapper = document.querySelector('.wrapper');
 const result = document.querySelector('.result');
 const filterContainer = document.querySelector('.filter-container');
 const idFilterBrand = document.querySelector('#filter-brand');
+const idProductClass = document.getElementsByClassName('idProduct');
 
 //  clearing and refresh page
 function refreshPage() {
@@ -20,6 +21,31 @@ function refreshPage() {
     idFilterBrand.removeChild(idFilterBrand.firstChild);
   }
 }
+function hideInputText(){
+  searchInput.value = '';
+}
+
+//  function to show Result of search
+function resultOfSearch(resultArray) {
+  // create DIV element 
+  for (let i = 0; i < resultArray.length; i++) {
+    const listOfResult = document.createElement('div');
+    listOfResult.innerHTML = `
+    <div class="category" id="listOfResult">
+    <div class="round">
+    <img src="${resultArray[i].image}" alt="">
+    </div>
+    <h4>${resultArray[i].category}</h4>
+    <h4>${resultArray[i].year}</h4>
+    <h4 class="idProduct">${resultArray[i].idProduct}</h4>
+    <h4>Name: ${resultArray[i].nameProduct}</h4>
+    <h4>Brand: ${resultArray[i].brand}</h4>
+    <h4>${resultArray[i].price}$</h4>
+    </div>`
+    result.appendChild(listOfResult)
+  }
+}
+
 //  FUNCTION TO show Filter Container on Left Side
 
 //  !!!! -- ALL BRAND ARRAY IN LEFT CONTAINER --- !!!!
@@ -30,7 +56,6 @@ function filterBrandFn() {
     const brandName = data[i].brand
     if (!dataBrand.includes(brandName)) {
       dataBrand.push(data[i].brand)
-      console.log(data[i].brand + data[i].idProduct)
     }
   }
   // show in the left container array of Brand Name
@@ -40,12 +65,32 @@ function filterBrandFn() {
         <input type="checkbox" id="${dataBrand[i]}" >
         <label for="${dataBrand[i]}">${dataBrand[i]}</label><br>
             `
-            idFilterBrand.appendChild(listOfFilter)
+    idFilterBrand.appendChild(listOfFilter)
   }
 }
+// search By checkbox Brand 
+function searchByBrand(event) {
+  const item = event.target
+  let brandArray = [];
+  for (let j = 0; j < idProductClass.length; j++) {
+    let idPrClass = idProductClass[j].innerText
+
+    for (let i = 0; i < data.length; i++) {
+      let brand = data[i].brand.toLowerCase();
+      let idPr = data[i].idProduct.toString();
+
+      if (item.id.toLowerCase() === brand && idPrClass === idPr) {
+        console.log(data[i].idProduct.toString())
+        brandArray.push(data[i]);
+      }
+    }
+  }
+  while (result.hasChildNodes()) {
+    result.removeChild(result.firstChild);
+  }
+  resultOfSearch(brandArray)
+}
 //  !!!! -- ALL RESOLUTION ARRAY IN LEFT CONTAINER --- !!!!
-
-
 
 // click and show By Category
 const showByCategory = (event) => {
@@ -53,25 +98,14 @@ const showByCategory = (event) => {
   wrapper.style.display = 'none'
   result.style.display = 'flex';
   filterContainer.style.display = 'block'
+  let categoryArray = [];
   for (let i = 0; i < data.length; i++) {
     if (item.id === data[i].category.toLowerCase()) {
-      const listOfResult = document.createElement('div');
-      listOfResult.innerHTML = `
-                <div class="category" id="listOfResult">
-                <div class="round">
-                <img src="${data[i].image}" alt="">
-                </div>
-                <h4>${data[i].category}</h4>
-                <h4>ID# ${data[i].idProduct}</h4>
-                <h4>Name: ${data[i].nameProduct}</h4>
-                <h4>Brand: ${data[i].brand}</h4>
-                <h4>${data[i].price}$</h4>
-                </div>
-                `
-      result.appendChild(listOfResult)
+      categoryArray.push(data[i]);
     }
   }
-  filterBrandFn()
+  resultOfSearch(categoryArray);
+  filterBrandFn();
 }
 
 //  function to show searched Product
@@ -80,7 +114,6 @@ function searchProduct() {
   wrapper.style.display = 'none';
   result.style.display = 'flex';
   filterContainer.style.display = 'block'
-  console.log(searchValue);
 
   // const newData = data.map(el => {
   //     const newEl = {};
@@ -95,32 +128,18 @@ function searchProduct() {
     let valArr = Object.values(el);
     return valArr.toString().toLowerCase().includes(searchValue)
   })
-  console.log(searchData)
-  // create DIV element 
-  for (let i = 0; i < searchData.length; i++) {
-    const listOfResult = document.createElement('div');
-    listOfResult.innerHTML = `
-        <div class="category" id="listOfResult">
-        <div class="round">
-        <img src="${searchData[i].image}" alt="">
-        </div>
-        <h4>${searchData[i].category}</h4>
-        <h4>ID# ${searchData[i].idProduct}</h4>
-        <h4>Name: ${searchData[i].nameProduct}</h4>
-        <h4>Brand: ${searchData[i].brand}</h4>
-        <h4>${searchData[i].price}$</h4>
-        </div>`
-    result.appendChild(listOfResult)
-  }
+  resultOfSearch(searchData);
   if (searchInput.value === '') {
     refreshPage()
   }
+  filterBrandFn();
+  setTimeout(hideInputText, 3000)
 }
 //  add event-Listeners
 refresh.addEventListener('click', refreshPage);
 wrapper.addEventListener('click', showByCategory);
 searchBtn.addEventListener('click', searchProduct);
-
+idFilterBrand.addEventListener('click', searchByBrand);
 searchInput.addEventListener("keypress", function (event) {
   if (event.key === 'Enter') {
     searchProduct();

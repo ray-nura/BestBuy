@@ -22,6 +22,7 @@ export const getData = function () {
       "productWeight": 3.75,
       "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6477/6477887_sd.jpg;maxHeight=640;maxWidth=550",
     },
+    
 
     {
       "idProduct": 123002,
@@ -303,6 +304,7 @@ export const getData = function () {
       "idProduct": 123015,
       "nameProduct": " 75' Class QN84A Neo QLED 4K UHD Smart Tizen TV",
       "category": "tv",
+      "modelNumber": "ABC0011df123", // ??
       "brand": "Samsung",
       "year": " 2020",
       "colors": "black",
@@ -310,7 +312,7 @@ export const getData = function () {
       "regularPrice": 2799.99,
       "currentPrice": 2649.99,
       "Resolution": '4K(2160p)',
-      "Screen Size Class": '75',
+      "screenSize": '75',
       "Display Type": "Led",
       "Backlight Type": "Full Array LOcal Dimming",
       "Smart capable": true,
@@ -321,7 +323,7 @@ export const getData = function () {
     // LG-6452992
     {
       "idProduct": 123016,
-      "nameProduct": " 70” Class UP8070 Series LED 4K UHD Smart webOS TV",
+      "nameProduct": " 70\" Class UP8070 Series LED 4K UHD Smart webOS TV",
       "category": "tv",
       "year": "2019",
       "Model": "70UP8070PUA",
@@ -351,7 +353,7 @@ export const getData = function () {
       "colors": "Black",
       "series": "C1",
       "regularPrice": 499.99,
-      "currentPrice": 399.99,
+      
       "Resolution": '4K(2160p)',
       "Screen Size Class": '64.5',
       "Display Type": "Oled",
@@ -469,7 +471,7 @@ export const getData = function () {
     },
     // Sony - 6455218
     {
-      "idProduct": "6455218",
+      "idProduct": 6455218,
       "nameProduct": " 65\" Class BRAVIA XR A80J Series OLED 4K UHD Smart Google TV",
       "category": "tv",
       "Model": "XR65A80J",
@@ -490,7 +492,7 @@ export const getData = function () {
     },
     ///Insignia -6247254
     {
-      "idProduct": "6247254",
+      "idProduct": 6247254,
       "nameProduct": " 32\" Class F20 Series LED HD Smart Fire TV",
       "category": "tv",
       "Model": "NS-32DF310NA19",
@@ -512,7 +514,7 @@ export const getData = function () {
     },
     // samsung -6452966
     {
-      "idProduct": "6252966",
+      "idProduct": 6252966,
       "nameProduct": " 43\" Class 8000 Series LED 4K UHD Smart Tizen TV ",
       "category": "tv",
       "Model": " UN43AU8000FXZA",
@@ -534,7 +536,7 @@ export const getData = function () {
     },
     // Samsung- 6451478
     {
-      "idProduct": "6451478",
+      "idProduct": 6451478,
       "nameProduct": " 65\" Class Q80A Series QLED 4K UHD Smart Tizen TV ",
       "category": "tv",
       "Model": " QN65Q80AAFXZA",
@@ -556,7 +558,7 @@ export const getData = function () {
     },
     // Samsung- 6453024
     {
-      "idProduct": "6453024",
+      "idProduct": 6453024,
       "nameProduct": " 65\" Class 8000 Series LED 4K UHD Smart Tizen TV",
       "category": "tv",
       "Model": "UN65AU8000FXZA",
@@ -578,7 +580,7 @@ export const getData = function () {
     },
     {
       // Samsung 642916
-      "idProduct": "642916",
+      "idProduct": 642916,
       "nameProduct": " 70\" Class 7 Series LED 4K UHD Smart Tizen TV",
       "category": "tv",
       "Model": "UN70TU7000BXZA",
@@ -600,7 +602,7 @@ export const getData = function () {
     },
     // Insignia 6398122
     {
-      "idProduct": "6398122",
+      "idProduct": 6398122,
       "nameProduct": " 40\" Class N10 Series LED Full HD TV",
       "category": "tv",
       "Model": "NS-40D510NA21",
@@ -622,7 +624,7 @@ export const getData = function () {
     },
     // Insignia 63955127
     {
-      "idProduct": "63955127",
+      "idProduct": 63955127,
       "nameProduct": " 32\" Class N10 Series LED HD TV",
       "category": "tv",
       "Model": "NS-32D310NA21",
@@ -644,7 +646,7 @@ export const getData = function () {
     },
     // Vankyo - 6470323
     {
-      "idProduct": "6470323",
+      "idProduct": 6470323,
       "nameProduct": " Leisure 3W PRO Wireless 720P Mini Projector",
       "category": "tv",//projector
       "Model": "LS3W PRO",
@@ -664,7 +666,7 @@ export const getData = function () {
     },
     // Samsung 6401738
     {
-      "idProduct": "6401738",
+      "idProduct": 6401738,
       "nameProduct": " 50\" Class 7 Series LED 4K UHD Smart Tizen TV",
       "category": "tv",
       "Model": "UN50TU7000FXZA",
@@ -686,7 +688,7 @@ export const getData = function () {
     },
     // LG 6453324
     {
-      "idProduct": "6453324",
+      "idProduct": 6453324,
       "nameProduct": "55\" Class C1 Series OLED 4K UHD Smart webOS TV",
       "category": "tv",
       "model": "OLED55C1PUB",
@@ -707,7 +709,7 @@ export const getData = function () {
     },
     // TCL-6481727
     {
-      "idProduct": "6481727",
+      "idProduct": 6481727,
       "nameProduct": "70\" Class 4-Series LED 4K UHD HDR Smart Android TV",
       "category": "tv",
       "model": "70S434",
@@ -731,7 +733,7 @@ export const getData = function () {
     // Iphones:
     // Iphone 13 mini -6443301
     {
-      "idProduct ": 6443301,
+      "idProduct": 6443301,
       "category": "apple",
       "Product Name": "iPhone 13 mini 5G 128GB",
       "brand": "Apple",
@@ -747,7 +749,7 @@ export const getData = function () {
     },
     //Iphone 13 -6443289
     {
-      "idProduct ": 6443289,
+      "idProduct": 6443289,
       "category": "apple",
       "Product Name": "Apple - iPhone 13 5G 128GB - Blue (Verizon)",
       "brand": "Apple",
@@ -765,7 +767,7 @@ export const getData = function () {
     //
     // Iphone 13 Pro-6443321
     {
-      "id ": 6443321,
+      "idProduct": 6443321,
       "category": "apple",
       "Product Name": "iPhone 13 Pro 5G 128GB",
       "brand": "Apple",
@@ -782,7 +784,7 @@ export const getData = function () {
     },
     // Iphone 13 Pro Max
     {
-      "id ": 6443337,
+      "idProduct": 6443337,
       "category": "apple",
       "Product Name": "iPhone 13 Pro Max 5G 128GB",
       "brand": "Apple",
@@ -799,7 +801,8 @@ export const getData = function () {
     },
     //Macbooks ,ipads, airpod,
     {
-      "id": 6450853,
+      "idProduct": 6450853,
+      "category": "cellPhone",
       "category": "apple",
       "Product Name": "MacBook Pro 14\" Laptop - Apple M1 Pro chip - 16GB Memory - 512GB SSD (Latest Model)",
       "brand": "Apple",
@@ -814,7 +817,7 @@ export const getData = function () {
       "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6450/6450853_sd.jpg;maxHeight=640;maxWidth=550",
     },
     {
-      "id": 4001811,
+      "idProduct": 4001811,
       "category": "apple",
       "Product Name": "10.2-Inch iPad (Latest Model) with Wi-Fi - 64GB",
       "brand": "Apple",
@@ -828,7 +831,7 @@ export const getData = function () {
       "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/4901/4901811_sd.jpg;maxHeight=640;maxWidth=550",
     },
     {
-      "id": 6373463,
+      "idProduct": 6373463,
       "category": "apple",
       "Product Name": "AirPods Max",
       "brand": "Apple",
@@ -840,7 +843,7 @@ export const getData = function () {
       "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6373/6373463_sd.jpg;maxHeight=640;maxWidth=550",
     },
     {
-      "id": 4900942,
+      "idProduct": 4900942,
       "category": "apple",
       "Product Name": "AirPods Pro (with Magsafe Charging Case)",
       "brand": "Apple",
