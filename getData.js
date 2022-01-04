@@ -5,14 +5,14 @@ export const getData = function () {
       "nameProduct": "someName", //string
       "category": "TV", // tv computers laptop tablets monitor cellPhone apple games app speakers headphones homeApp werrTechn
       "modelNumber": "ABC0011df123",
-      "price": 350, // number
+      "price": 350, //Daniyar number
       "shipping": "Free", // or pickup, 
-      "year": 2019, // 2018-2020-2021-2022
+      "year": 2019, // Aichurok 2018-2020-2021-2022
       "brand": "Sony", // HP Lenovo, Toshiba, LG, Samsung, Sony, Microsoft
       "type": "Curved", // Curved flat Smart
-      "displayType": " Full HD", //LED OLED HD 4K  4k-ULTRA-HP
-      "screenSize": 32, // 32-40-43-50-55-70-75-85
-      "color": "silver", // black, gold, gray, white
+      "displayType": " Full HD", // Gulzat LED OLED HD 4K  4k-ULTRA-HP
+      "screenSize": 32, // Talha 32-40-43-50-55-70-75-85
+      "color": "silver", // Talha  black, gold, gray, white
       "storageType": "SSD",
       "storage": 256, // 512GB -1TB
       "memoryRAM": 8, // 4-16-32 GB
@@ -51,7 +51,7 @@ export const getData = function () {
       "nameProduct": "MacBook Pro",
       "category": "Computers",
       "modelNumber": "MWP42LL/A",
-      "price": 1.299,
+      "price": 1299.99,
       "shipping": "Free",
       "year": 2020,
       "brand": "Apple",
@@ -71,7 +71,7 @@ export const getData = function () {
       "nameProduct": "Dell",
       "category": "Computers",
       "modelNumber": "G7700-7231BLK-PUS",
-      "price": 1.444,
+      "price": 1444,
       "shipping": "Free",
       "year": 2020,
       "brand": "Dell",
@@ -113,7 +113,7 @@ export const getData = function () {
       "nameProduct": "Asus",
       "category": "Computers",
       "modelNumber": "GU502LV-BI7N8",
-      "price": 1.317,
+      "price": 1317,
       "shipping": "Free",
       "year": 2020,
       "brand": "Asus",
@@ -906,7 +906,7 @@ export const getData = function () {
       "nameProduct": "someName8",
       "category": "computers",
       "modelNumber": "ABC0011df123",
-      "price": 350,
+      "price": 2350,
       "shipping": "Free",
       "year": 2019,
       "brand": "Apple",
@@ -927,7 +927,7 @@ export const getData = function () {
       "nameProduct": "someName7 89 LG",
       "category": "computers",
       "modelNumber": "ABC0011df123",
-      "price": 350,
+      "price": 1350,
       "shipping": "Free",
       "year": 2019,
       "brand": "LG",
@@ -948,7 +948,7 @@ export const getData = function () {
       "nameProduct": "someName6 45 LG",
       "category": "computers",
       "modelNumber": "ABC0011df123",
-      "price": 350,
+      "price": 1250,
       "shipping": "Free",
       "year": 2019,
       "brand": "LG",
@@ -969,7 +969,7 @@ export const getData = function () {
       "nameProduct": "someName5 Sony",
       "category": "TV",
       "modelNumber": "ABC0011df123",
-      "price": 350,
+      "price": 1050,
       "shipping": "Free",
       "year": 2019,
       "brand": "Sony",
@@ -990,7 +990,7 @@ export const getData = function () {
       "nameProduct": "someName LG",
       "category": "TV",
       "modelNumber": "ABC0011df123",
-      "price": 350,
+      "price": 850,
       "shipping": "Free",
       "year": 2019,
       "brand": "LG",
@@ -1011,7 +1011,7 @@ export const getData = function () {
       "nameProduct": "Sony",
       "category": "computers",
       "modelNumber": "ABC0011df123",
-      "price": 350,
+      "price": 650,
       "shipping": "Free",
       "year": 2019,
       "brand": "Sony",
@@ -1074,7 +1074,7 @@ export const getData = function () {
       "nameProduct": "someName6",
       "category": "computers",
       "modelNumber": "ABC0011df123",
-      "price": 350,
+      "price": 2350,
       "shipping": "Free",
       "year": 2019,
       "brand": "Apple",
@@ -1095,7 +1095,7 @@ export const getData = function () {
       "nameProduct": "someName5",
       "category": "TV",
       "modelNumber": "ABC0011df123",
-      "price": 350,
+      "price": 1350,
       "shipping": "Free",
       "year": 2019,
       "brand": "Apple",
@@ -1137,7 +1137,7 @@ export const getData = function () {
       "nameProduct": "someName6",
       "category": "computers",
       "modelNumber": "ABC0011df123",
-      "price": 350,
+      "price": 950,
       "shipping": "Free",
       "year": 2019,
       "brand": "Apple",
@@ -1158,7 +1158,7 @@ export const getData = function () {
       "nameProduct": "someName5",
       "category": "apple",
       "modelNumber": "ABC0011df123",
-      "price": 350,
+      "price": 988,
       "shipping": "Free",
       "year": 2019,
       "brand": "Apple",
@@ -1179,7 +1179,7 @@ export const getData = function () {
       "nameProduct": "someName apple",
       "category": "apple",
       "modelNumber": "ABC0011df123",
-      "price": 350,
+      "price": 2050,
       "shipping": "Free",
       "year": 2019,
       "brand": "Apple",

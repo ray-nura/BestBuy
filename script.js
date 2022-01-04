@@ -185,25 +185,25 @@ function showProduct(id) {
         <h4> ${data[i].category.toUpperCase()}</h4>
         <h1> ${data[i].brand}</h1>
         <h2> ${data[i].nameProduct}</h2>
-        <h5>  <b>Model: </b> ${data[i].modelNumber}</h5>
+        <h5>  <b>Model: </b> ${data[i].modelNumber}</h5><br>
         <h4> ${data[i].year}</h4>
-        <p> ${data[i].type}, ${data[i].displayType}, ${data[i].screenSize}, ${data[i].color}</p>
+        <p> ${data[i].type}, ${data[i].displayType}, ${data[i].screenSize}, ${data[i].color}</p><br>
         <h3> Get it today</h3><br>
-
         <p><i class="fas fa-store-alt"></i> <b> Pickup:</b> </p>
         <h5>Available today at a location 4 miles away</h5>
         <h4>See all pickup locations</h4>
-
+        <br>
         <p><i class="fas fa-shipping-fast"></i> <b> FREE Shipping:</b> </p>
         <h4>See all shipping options</h4>
         </div>
       <div>
         <h3> ${data[i].brand}</h3>
         <h4> Price Match Guarantee</h4>
-        <h1> $${data[i].price}</h1>
+        <br>
+        <h1> $${data[i].price}</h1><br>
         <button class="btn" id="${data[i].idProduct}">Shop Now</button><br>
         <button class="btn-add-card" id="${data[i].idProduct}">  <i class="fas fa-shopping-cart"></i>  Add to Cart</button>
-        <h6> <b>Open-Box:</b> from $${(data[i].price)/100*70}</h6>
+        <h4> <b>Open-Box:</b> from $${Math.ceil((data[i].price)/100*70)}</h4>
        </div>
       `;
       product.appendChild(shopProduct);

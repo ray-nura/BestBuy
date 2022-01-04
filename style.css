@@ -273,8 +273,13 @@ button {
 }
 
 .filter-container fieldset {
-  color: tomato;
+  color: #242323;
+  font-size: smaller;
   padding: 10px;
+}
+.filter-container legend{
+  font-size: large;
+  color: var(--text-blue-color);
 }
 
 #filter-container input {
