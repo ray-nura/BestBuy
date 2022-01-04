@@ -1,3 +1,9 @@
+:root {
+  --main-blue-color: #0046be;
+  --text-blue-color: #082e8a;
+  --yellow-color: #fff100;
+  --grey-color: #e7e9ee;
+}
 * {
   margin: 0;
   padding: 0;
@@ -8,11 +14,11 @@ body {
   /* background-color: #011e73; */
   /* background: linear-gradient(blue, #011E73); */
 }
-
 .header {
-  background-color: blue;
+  background-color: var(--main-blue-color);
   font-family: Arial, Helvetica, sans-serif;
   position: sticky;
+  z-index: 1;
   top: 0;
   width: 100%;
 }
@@ -42,7 +48,7 @@ body {
   position: relative;
   width: 90%;
   height: 50px;
-  border: 4px solid blue;
+  border: 4px solid var(--main-blue-color);
   padding: 0px 10px;
   border-radius: 8px;
   background-color: white;
@@ -71,7 +77,7 @@ body {
 }
 .searchTop .fas {
   font-size: 25px;
-  color: blue;
+  color: var(--main-blue-color);
   padding-top: 12px;
 }
 
@@ -122,15 +128,16 @@ body {
   padding: 0;
   width: 100%;
   height: 320px;
-  background-color: yellow;
-  color: rgb(21, 21, 240);
+  background-color: var(--yellow-color);
+  color: var(--main-blue-color);
+  /* color: blue; */
   text-align: left;
   padding-left: 25%;
   padding-right: 15%;
   padding-bottom: 70px;
   font-size: 1.5rem;
   display: flex;
-  justify-content: space-between ;
+  justify-content: space-between;
   align-items: center;
 }
 .winterHoliday h1 {
@@ -138,25 +145,24 @@ body {
   padding-bottom: 15px;
 }
 .winterHoliday p {
-  color: black;
+  color: rgb(29, 28, 28);
   font-size: 1rem;
   font-weight: bold;
 }
 .winterHoliday span {
-  color: black;
+  color: rgb(34, 33, 33);
   font-size: 0.7rem;
 }
-button{
+button {
   color: white;
-  background-color: rgb(21, 21, 240);
+  background-color: var(--main-blue-color);
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   margin-top: 20px;
   cursor: pointer;
 }
-.wrapper,
-.result {
+.wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -165,17 +171,15 @@ button{
   margin-left: auto;
   margin-right: auto;
   padding: 50px;
-  color: rgb(21, 21, 240);
+  color: var(--main-blue-color);
 }
-.result {
-  margin-left: 25%;
-}
+
 .category {
   text-align: center;
   width: 225px;
   height: 350px;
   margin-right: 20px;
-  top: -100px;
+  /* top: -100px; */
   cursor: pointer;
 }
 .wrapper h4 {
@@ -184,7 +188,7 @@ button{
 }
 
 .category h4 {
-  color: rgb(75, 133, 233);
+  color: var(--main-blue-color);
   padding-top: 20px;
   pointer-events: none;
 }
@@ -203,14 +207,57 @@ button{
   padding-top: 35px;
   pointer-events: none;
 }
-.result h4 {
-  padding: 1px;
+
+.result{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-left: 23%;
+  color: var(--main-blue-color);
 }
 
+.result h4 {
+  padding: 5px;
+  color: #252525;
+  pointer-events: none;
+}
+.resultOfSearch {
+  border: 1px solid var(--grey-color);
+  width: 100%;
+  height: 500px;
+  background-color: #ffff;
+  position: relative;
+  cursor: pointer;
+  align-items: center;
+}
+.resultOfSearch img {
+  max-width: 80%;
+  max-height: 220px;
+  position: absolute;
+  top: 5px;
+  right: 15%;
+  padding-bottom: 5%;
+  padding-top: 5%;
+  pointer-events: none;
+}
+.resultOfSearch .info {
+  position: absolute;
+  bottom: 50px;
+  left: 5%;
+}
+.resultOfSearch button {
+  margin-bottom: 1px;
+  position: absolute;
+  bottom: 15px;
+  right: 15%;
+}
+.idProduct {
+  display: none;
+}
+/* ------- left side filter container-----  */
 .filter-container {
   display: none;
   /* display: block; */
-  width: 23%;
+  width: 20%;
   min-width: 220px;
   position: fixed;
   top: 150px;
@@ -225,15 +272,59 @@ button{
   border-left: 1px solid lightgrey;
 }
 
-.filter-container fieldset{
+.filter-container fieldset {
   color: tomato;
   padding: 10px;
 }
 
-#filter-container input{
-  border: blueviolet; 
+#filter-container input {
+  border: blueviolet;
 }
 
-#filter-container label{
+#filter-container label {
   color: blue;
+}
+
+.showProduct {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+  grid-gap: 10px;
+  margin-left: 23%;
+  
+  max-width: 90%;
+  /* margin-top: -150px; */
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 50px;
+  color: var(--main-blue-color);
+}
+.showProduct img {
+max-width: 100%;
+max-height: 40vh;
+margin-left: auto;
+  margin-right: auto;
+}
+.btn-add-card{
+  color: #252525;
+  background-color: var(--yellow-color);
+  padding: 10px 30px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+}.showProduct button{
+  width: 80%;
+  margin-bottom: 3%;
+}
+.showProduct h1 {
+  color: #252525;
+}
+.showProduct h3 {
+  color: green;
+}
+.showProduct h5 {
+  color: #252525;
+}
+.showProduct p {
+  color: #383737;
 }

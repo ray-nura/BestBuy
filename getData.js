@@ -3,12 +3,12 @@ export const getData = function () {
     {
       "idProduct": 123001, //number
       "nameProduct": "someName", //string
-      "category": "tv", // tv computers laptop tablets monitor cellPhone apple games app speakers headphones homeApp werrTechn
+      "category": "TV", // tv computers laptop tablets monitor cellPhone apple games app speakers headphones homeApp werrTechn
       "modelNumber": "ABC0011df123",
       "price": 350, // number
       "shipping": "Free", // or pickup, 
       "year": 2019, // 2018-2020-2021-2022
-      "brand": "Apple", // HP Lenovo, Toshiba, LG, Samsung, Sony, Microsoft
+      "brand": "Sony", // HP Lenovo, Toshiba, LG, Samsung, Sony, Microsoft
       "type": "Curved", // Curved flat Smart
       "displayType": " Full HD", //LED OLED HD 4K  4k-ULTRA-HP
       "screenSize": 32, // 32-40-43-50-55-70-75-85
@@ -20,13 +20,13 @@ export const getData = function () {
       "screenResolution": "1600 x 900", // 3840 x 2160(4K) 3456 x 2234 3000x2000 
       "touchScreen": true, // false
       "productWeight": 3.75,
-      "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6477/6477887_sd.jpg;maxHeight=640;maxWidth=550",
+      "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6454/6454108_sd.jpg",
     },
 
 
     {
       "idProduct": 123002,
-      "nameProduct": "Samsung",
+      "nameProduct": "Smart LED 1920 x 1080",
       "category": "Computers",
       "modelNumber": "XE350XBA-K01US",
       "price": 299,
@@ -513,9 +513,9 @@ export const getData = function () {
     {
       "idProduct": 6252966,
       "nameProduct": " 43\" Class 8000 Series LED 4K UHD Smart Tizen TV ",
-      "category": "tv",
+      "category": "TV",
       "modelNumber": " UN43AU8000FXZA",
-      "brand": " Samsung",
+      "brand": "Samsung",
       "year": "2021",
       "color": "black",
       "series": "8000",
@@ -534,9 +534,9 @@ export const getData = function () {
     {
       "idProduct": 6451478,
       "nameProduct": " 65\" Class Q80A Series QLED 4K UHD Smart Tizen TV ",
-      "category": "tv",
+      "category": "TV",
       "modelNumber": " QN65Q80AAFXZA",
-      "brand": " Samsung",
+      "brand": "Samsung",
       "year": "2021",
       "color": "titan-black",
       "series": "Q80",
@@ -555,9 +555,9 @@ export const getData = function () {
     {
       "idProduct": 6453024,
       "nameProduct": " 65\" Class 8000 Series LED 4K UHD Smart Tizen TV",
-      "category": "tv",
+      "category": "TV",
       "modelNumber": "UN65AU8000FXZA",
-      "brand": " Samsung",
+      "brand": "Samsung",
       "year": "2021",
       "color": "black",
       "series": "8000",
@@ -576,9 +576,9 @@ export const getData = function () {
       // Samsung 642916
       "idProduct": 642916,
       "nameProduct": " 70\" Class 7 Series LED 4K UHD Smart Tizen TV",
-      "category": "tv",
+      "category": "TV",
       "modelNumber": "UN70TU7000BXZA",
-      "brand": " Samsung",
+      "brand": "Samsung",
       "year": "2021",
       "color": "Titan-black",
       "series": "7",
@@ -597,9 +597,9 @@ export const getData = function () {
     {
       "idProduct": 6398122,
       "nameProduct": " 40\" Class N10 Series LED Full HD TV",
-      "category": "tv",
+      "category": "TV",
       "modelNumber": "NS-40D510NA21",
-      "brand": " Insignia™",
+      "brand": "Insignia™",
       "year": "2020",
       "color": "black",
       "series": "N10",
@@ -618,9 +618,9 @@ export const getData = function () {
     {
       "idProduct": 63955127,
       "nameProduct": " 32\" Class N10 Series LED HD TV",
-      "category": "tv",
+      "category": "TV",
       "modelNumber": "NS-32D310NA21",
-      "brand": " Insignia™",
+      "brand": "Insignia™",
       "year": "2020",
       "color": "black",
       "series": "N10",
@@ -639,7 +639,7 @@ export const getData = function () {
     {
       "idProduct": 6470323,
       "nameProduct": " Leisure 3W PRO Wireless 720P Mini Projector",
-      "category": "tv",//projector
+      "category": "TV",//projector
       "modelNumber": "LS3W PRO",
       "brand": " Vankyo",
       "year": "false",
@@ -658,9 +658,9 @@ export const getData = function () {
     {
       "idProduct": 6401738,
       "nameProduct": " 50\" Class 7 Series LED 4K UHD Smart Tizen TV",
-      "category": "tv",
+      "category": "TV",
       "modelNumber": "UN50TU7000FXZA",
-      "brand": " Samsung",
+      "brand": "Samsung",
       "year": "2020",
       "color": "gray",
       "series": "7",
@@ -679,7 +679,7 @@ export const getData = function () {
     {
       "idProduct": 6453324,
       "nameProduct": "55\" Class C1 Series OLED 4K UHD Smart webOS TV",
-      "category": "tv",
+      "category": "TV",
       "modelNumber": "OLED55C1PUB",
       "brand": "LG",
       "year": "2021",
@@ -699,7 +699,7 @@ export const getData = function () {
     {
       "idProduct": 6481727,
       "nameProduct": "70\" Class 4-Series LED 4K UHD HDR Smart Android TV",
-      "category": "tv",
+      "category": "TV",
       "modelNumber": "70S434",
       "brand": "TCL",
       "year": "2021",
@@ -856,7 +856,7 @@ export const getData = function () {
       "processorModel": "Intel Core i3",
       "screenResolution": "1600 x 900",
       "touchScreen": true,
-      "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6477/6477887_sd.jpg;maxHeight=640;maxWidth=550",
+      "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6428/6428998_sd.jpg",
 
     },
     {
@@ -883,7 +883,7 @@ export const getData = function () {
     {
       "idProduct": 104,
       "nameProduct": "someName4",
-      "category": "tv",
+      "category": "TV",
       "modelNumber": "ABC0011df123",
       "price": 350,
       "shipping": "Free",
@@ -898,7 +898,7 @@ export const getData = function () {
       "processorModel": "Intel Core i3",
       "screenResolution": "1600 x 900",
       "touchScreen": true,
-      "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6477/6477887_sd.jpg;maxHeight=640;maxWidth=550",
+      "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6453/6453321_sd.jpg",
 
     },
     {
@@ -919,7 +919,7 @@ export const getData = function () {
       "processorModel": "Intel Core i3",
       "screenResolution": "1600 x 900",
       "touchScreen": true,
-      "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6477/6477887_sd.jpg;maxHeight=640;maxWidth=550",
+      "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6471/6471189_sd.jpg",
 
     },
     {
@@ -940,7 +940,7 @@ export const getData = function () {
       "processorModel": "Intel Core i3",
       "screenResolution": "1600 x 900",
       "touchScreen": true,
-      "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6477/6477887_sd.jpg;maxHeight=640;maxWidth=550",
+      "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6478/6478304cv11d.jpg",
 
     },
     {
@@ -961,13 +961,13 @@ export const getData = function () {
       "processorModel": "Intel Core i3",
       "screenResolution": "1600 x 900",
       "touchScreen": true,
-      "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6477/6477887_sd.jpg;maxHeight=640;maxWidth=550",
+      "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6471/6471189_sd.jpg",
 
     },
     {
       "idProduct": 108,
       "nameProduct": "someName5 Sony",
-      "category": "tv",
+      "category": "TV",
       "modelNumber": "ABC0011df123",
       "price": 350,
       "shipping": "Free",
@@ -982,13 +982,13 @@ export const getData = function () {
       "processorModel": "Intel Core i3",
       "screenResolution": "1600 x 900",
       "touchScreen": true,
-      "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6477/6477887_sd.jpg;maxHeight=640;maxWidth=550",
+      "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6465/6465635_sd.jpg",
 
     },
     {
       "idProduct": 109,
       "nameProduct": "someName LG",
-      "category": "tv",
+      "category": "TV",
       "modelNumber": "ABC0011df123",
       "price": 350,
       "shipping": "Free",
@@ -1003,7 +1003,7 @@ export const getData = function () {
       "processorModel": "Intel Core i3",
       "screenResolution": "1600 x 900",
       "touchScreen": true,
-      "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6477/6477887_sd.jpg;maxHeight=640;maxWidth=550",
+      "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6453/6453321_sd.jpg",
 
     },
     {
@@ -1024,13 +1024,13 @@ export const getData = function () {
       "processorModel": "Intel Core i3",
       "screenResolution": "1600 x 900",
       "touchScreen": true,
-      "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6477/6477887_sd.jpg;maxHeight=640;maxWidth=550",
+      "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6478/6478304cv11d.jpg",
 
     },
     {
       "idProduct": 111,
       "nameProduct": "someName5 Sony",
-      "category": "tv",
+      "category": "TV",
       "modelNumber": "ABC0011df123",
       "price": 350,
       "shipping": "Free",
@@ -1045,13 +1045,13 @@ export const getData = function () {
       "processorModel": "Intel Core i3",
       "screenResolution": "1600 x 900",
       "touchScreen": true,
-      "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6477/6477887_sd.jpg;maxHeight=640;maxWidth=550",
+      "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6454/6454108_sd.jpg",
 
     },
     {
       "idProduct": 112,
       "nameProduct": "Sony 22",
-      "category": "tv",
+      "category": "TV",
       "modelNumber": "ABC0011df123",
       "price": 350,
       "shipping": "Free",
@@ -1066,7 +1066,7 @@ export const getData = function () {
       "processorModel": "Intel Core i3",
       "screenResolution": "1600 x 900",
       "touchScreen": true,
-      "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6477/6477887_sd.jpg;maxHeight=640;maxWidth=550",
+      "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6453/6453321_sd.jpg",
 
     },
     {
@@ -1087,13 +1087,13 @@ export const getData = function () {
       "processorModel": "Intel Core i3",
       "screenResolution": "1600 x 900",
       "touchScreen": true,
-      "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6477/6477887_sd.jpg;maxHeight=640;maxWidth=550",
+      "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6454/6454254_sd.jpg",
 
     },
     {
       "idProduct": 114,
       "nameProduct": "someName5",
-      "category": "tv",
+      "category": "TV",
       "modelNumber": "ABC0011df123",
       "price": 350,
       "shipping": "Free",
@@ -1108,13 +1108,13 @@ export const getData = function () {
       "processorModel": "Intel Core i3",
       "screenResolution": "1600 x 900",
       "touchScreen": true,
-      "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6477/6477887_sd.jpg;maxHeight=640;maxWidth=550",
+      "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6465/6465635_sd.jpg",
 
     },
     {
       "idProduct": 115,
       "nameProduct": "someName",
-      "category": "tv",
+      "category": "TV",
       "modelNumber": "ABC0011df123",
       "price": 350,
       "shipping": "Free",
@@ -1129,7 +1129,7 @@ export const getData = function () {
       "processorModel": "Intel Core i3",
       "screenResolution": "1600 x 900",
       "touchScreen": true,
-      "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6477/6477887_sd.jpg;maxHeight=640;maxWidth=550",
+      "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6454/6454108_sd.jpg",
 
     },
     {
@@ -1150,7 +1150,7 @@ export const getData = function () {
       "processorModel": "Intel Core i3",
       "screenResolution": "1600 x 900",
       "touchScreen": true,
-      "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6477/6477887_sd.jpg;maxHeight=640;maxWidth=550",
+      "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6471/6471189_sd.jpg",
 
     },
     {
