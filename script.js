@@ -8,6 +8,7 @@ const wrapper = document.querySelector(".wrapper");
 const result = document.querySelector(".result");
 const filterContainer = document.querySelector(".filter-container");
 const idFilterBrand = document.querySelector("#filter-brand");
+const price = document.querySelector("#price");
 const idProductClass = document.getElementsByClassName("idProduct");
 const product = document.querySelector(".product");
 const flashSale = document.querySelector(".winterHoliday");
@@ -86,7 +87,6 @@ function searchByBrand(event) {
   let brandArray = [];
   for (let j = 0; j < idProductClass.length; j++) {
     let idPrClass = idProductClass[j].innerText;
-    console.log(idPrClass);
     for (let i = 0; i < data.length; i++) {
       let brand = data[i].brand.toLowerCase();
       let idPr = data[i].idProduct.toString();
@@ -101,6 +101,89 @@ function searchByBrand(event) {
     result.removeChild(result.firstChild);
   }
   resultOfSearch(brandArray);
+}
+//  !!!! -- ALL price  ARRAY IN LEFT CONTAINER --- !!!!
+
+function searchByPrice(event) {
+  const item = event.target;
+  let low = 0;
+  let high = 0;
+  switch (item.id) {
+    case "price75":
+      low = 50;
+      high = 74.99;
+      break;
+    case "price100":
+      low = 75;
+      high = 99.99;
+      break;
+    case "price150":
+      low = 100;
+      high = 149.99;
+      break;
+    case "price200":
+        low = 150;
+        high = 199.99;
+      break;
+    case "price250":
+        low = 200;
+        high = 249.99;
+        break;
+    case "price500":
+      low = 250;
+      high = 499.99;
+      break;
+    case "price750":
+        low = 500;
+        high = 749.99;
+      break;
+    case "price1000":
+      low = 750;
+      high = 999.99;
+      break;
+    case "price1250":
+          low = 1000;
+          high = 1249.99;
+      break;
+    case "price1500":
+        low = 1250;
+        high = 1499.99;
+      break;
+    case "price2000":
+            low = 1500;
+            high = 1999.99;
+      break;
+    case "price2500":
+          low = 2000;
+          high = 2499.99;
+      break;
+    case "price3000":
+          low = 2500;
+          high = 2999.99;
+      break;
+    default:
+      low = 3000;
+      high = 50000000;
+      break;
+  }
+  let priceArray = [];
+  for (let j = 0; j < idProductClass.length; j++) {
+    let idPrClass = idProductClass[j].innerText;
+
+    for (let i = 0; i < data.length; i++) {
+      let idPr = data[i].idProduct.toString();
+      let priceData = data[i].price;
+
+      if (idPrClass === idPr && low <= priceData && priceData < high) {
+        priceArray.push(data[i]);
+      }
+    }
+  }
+  while (result.hasChildNodes()) {
+    result.removeChild(result.firstChild);
+  }
+  resultOfSearch(priceArray);
+
 }
 //  !!!! -- ALL RESOLUTION ARRAY IN LEFT CONTAINER --- !!!!
 
@@ -203,7 +286,7 @@ function showProduct(id) {
         <h1> $${data[i].price}</h1><br>
         <button class="btn" id="${data[i].idProduct}">Shop Now</button><br>
         <button class="btn-add-card" id="${data[i].idProduct}">  <i class="fas fa-shopping-cart"></i>  Add to Cart</button>
-        <h4> <b>Open-Box:</b> from $${Math.ceil((data[i].price)/100*70)}</h4>
+        <h4> <b>Open-Box:</b> from $${Math.ceil((data[i].price) / 100 * 70)}</h4>
        </div>
       `;
       product.appendChild(shopProduct);
@@ -214,6 +297,7 @@ function showProduct(id) {
 refresh.addEventListener("click", refreshPage);
 wrapper.addEventListener("click", showByCategory);
 searchBtn.addEventListener("click", searchProduct);
+price.addEventListener("click", searchByPrice);
 idFilterBrand.addEventListener("click", searchByBrand);
 result.addEventListener("click", function (event) {
   const item = event.target;
