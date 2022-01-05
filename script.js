@@ -9,6 +9,7 @@ const result = document.querySelector(".result");
 const filterContainer = document.querySelector(".filter-container");
 const idFilterBrand = document.querySelector("#filter-brand");
 const price = document.querySelector("#price");
+const storageDiv = document.querySelector('#storageType');
 const idProductClass = document.getElementsByClassName("idProduct");
 const product = document.querySelector(".product");
 const flashSale = document.querySelector(".winterHoliday");
@@ -29,6 +30,11 @@ function refreshPage() {
   while (idFilterBrand.hasChildNodes()) {
     idFilterBrand.removeChild(idFilterBrand.firstChild);
   }
+  while (storageDiv.hasChildNodes()) {
+    storageDiv.removeChild(storageDiv.firstChild);
+  }
+  let isAllCheck = false;
+  Array.from(document.querySelectorAll('input[type=checkbox]')).forEach(el => el.checked = isAllCheck);
 }
 function hideInputText() {
   searchInput.value = "";
@@ -80,6 +86,8 @@ function filterBrandFn() {
     idFilterBrand.appendChild(listOfFilter);
   }
 }
+
+
 // search By checkbox Brand
 function searchByBrand(event) {
   const item = event.target;
@@ -102,6 +110,49 @@ function searchByBrand(event) {
   }
   resultOfSearch(brandArray);
 }
+//  Nigina ------******
+function storageTypeFn() {
+  const storageTypeArray = [];
+  for (let i = 0; i < data.length; i++) {
+    const storageType = data[i].storageType;
+    if (!storageTypeArray.includes(storageType)) {
+      storageTypeArray.push(data[i].storageType);
+    }
+  }
+  // show in the left container array of Brand Name
+  for (let i = 0; i < storageTypeArray.length; i++) {
+    const listOfFilter = document.createElement("div");
+    listOfFilter.innerHTML = `
+        <input type="checkbox" id="${storageTypeArray[i]}" >
+        <label for="${storageTypeArray[i]}" id="${storageTypeArray[i]}">${storageTypeArray[i]}</label><br>
+            `;
+    storageDiv.appendChild(listOfFilter);
+  }
+}
+
+function searchByStorageType(event) {
+  const item = event.target;
+  console.log(item);
+  let storageN = [];
+  for (let j = 0; j < idProductClass.length; j++) {
+    let idPrClass = idProductClass[j].innerText;
+    console.log(idPrClass)
+    for (let i = 0; i < data.length; i++) {
+      let storageT = data[i].storageType.toLowerCase();
+      let idPr = data[i].idProduct.toString();
+
+      if (item.id.toLowerCase() === storageT && idPrClass === idPr) {
+        console.log(data[i].idProduct.toString());
+        storageN.push(data[i]);
+      }
+    }
+  }
+  while (result.hasChildNodes()) {
+    result.removeChild(result.firstChild);
+  }
+  resultOfSearch(storageN);
+}
+
 //  !!!! -- ALL price  ARRAY IN LEFT CONTAINER --- !!!!
 
 function searchByPrice(event) {
@@ -122,44 +173,44 @@ function searchByPrice(event) {
       high = 149.99;
       break;
     case "price200":
-        low = 150;
-        high = 199.99;
+      low = 150;
+      high = 199.99;
       break;
     case "price250":
-        low = 200;
-        high = 249.99;
-        break;
+      low = 200;
+      high = 249.99;
+      break;
     case "price500":
       low = 250;
       high = 499.99;
       break;
     case "price750":
-        low = 500;
-        high = 749.99;
+      low = 500;
+      high = 749.99;
       break;
     case "price1000":
       low = 750;
       high = 999.99;
       break;
     case "price1250":
-          low = 1000;
-          high = 1249.99;
+      low = 1000;
+      high = 1249.99;
       break;
     case "price1500":
-        low = 1250;
-        high = 1499.99;
+      low = 1250;
+      high = 1499.99;
       break;
     case "price2000":
-            low = 1500;
-            high = 1999.99;
+      low = 1500;
+      high = 1999.99;
       break;
     case "price2500":
-          low = 2000;
-          high = 2499.99;
+      low = 2000;
+      high = 2499.99;
       break;
     case "price3000":
-          low = 2500;
-          high = 2999.99;
+      low = 2500;
+      high = 2999.99;
       break;
     default:
       low = 3000;
@@ -187,7 +238,7 @@ function searchByPrice(event) {
 }
 //  !!!! -- ALL RESOLUTION ARRAY IN LEFT CONTAINER --- !!!!
 
-// click and show By Category
+// click and show By Category MAIN !!!
 const showByCategory = (event) => {
   const item = event.target;
   wrapper.style.display = "none";
@@ -203,6 +254,7 @@ const showByCategory = (event) => {
   }
   resultOfSearch(categoryArray);
   filterBrandFn();
+  storageTypeFn()
 };
 
 //  function to show searched Product
@@ -298,7 +350,9 @@ refresh.addEventListener("click", refreshPage);
 wrapper.addEventListener("click", showByCategory);
 searchBtn.addEventListener("click", searchProduct);
 price.addEventListener("click", searchByPrice);
+storageDiv.addEventListener("click", searchByStorageType);
 idFilterBrand.addEventListener("click", searchByBrand);
+
 result.addEventListener("click", function (event) {
   const item = event.target;
   console.log(item.id);

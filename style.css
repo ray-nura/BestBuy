@@ -283,14 +283,6 @@ button {
   color: var(--text-blue-color);
 }
 
-#filter-container input {
-  border: blueviolet;
-}
-
-#filter-container label {
-  color: blue;
-}
-
 .showProduct {
   display: grid;
   grid-template-columns: 2fr 2fr 1fr;
