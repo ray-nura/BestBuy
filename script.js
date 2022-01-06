@@ -9,6 +9,7 @@ const result = document.querySelector(".result");
 const filterContainer = document.querySelector(".filter-container");
 const idFilterBrand = document.querySelector("#filter-brand");
 const price = document.querySelector("#price");
+const displayTypeDiv = document.querySelector("#filter-display-type");
 const storageDiv = document.querySelector('#storageType');
 const idProductClass = document.getElementsByClassName("idProduct");
 const product = document.querySelector(".product");
@@ -33,6 +34,10 @@ function refreshPage() {
   while (storageDiv.hasChildNodes()) {
     storageDiv.removeChild(storageDiv.firstChild);
   }
+  while (displayTypeDiv.hasChildNodes()) {
+    displayTypeDiv.removeChild(displayTypeDiv.firstChild);
+  }
+
   let isAllCheck = false;
   Array.from(document.querySelectorAll('input[type=checkbox]')).forEach(el => el.checked = isAllCheck);
 }
@@ -138,10 +143,10 @@ function searchByStorageType(event) {
     let idPrClass = idProductClass[j].innerText;
     console.log(idPrClass)
     for (let i = 0; i < data.length; i++) {
-      let storageT = data[i].storageType.toLowerCase();
+      let storageT = data[i].storageType;
       let idPr = data[i].idProduct.toString();
 
-      if (item.id.toLowerCase() === storageT && idPrClass === idPr) {
+      if (item.id === storageT && idPrClass === idPr) {
         console.log(data[i].idProduct.toString());
         storageN.push(data[i]);
       }
@@ -152,7 +157,48 @@ function searchByStorageType(event) {
   }
   resultOfSearch(storageN);
 }
+//  Gulzat ----********
 
+function searchByDisplayType(event) {
+  const item = event.target;
+  console.log(item);
+  let displayTypeArray = [];
+  for (let i = 0; i < idProductClass.length; i++) {
+    let idPrClass = idProductClass[i].innerText;
+    console.log(idPrClass)
+    for (let i = 0; i < data.length; i++) {
+      let displayType = data[i].displayType;
+      let idPr = data[i].idProduct.toString();
+
+      if (item.id === displayType && idPrClass === idPr) {
+        console.log(data[i].idProduct.toString());
+        displayTypeArray.push(data[i]);
+      }
+    }
+  }
+  while (result.hasChildNodes()) {
+    result.removeChild(result.firstChild);
+  }
+  resultOfSearch(displayTypeArray);
+}
+function displayType() {
+  const displayTypeArray = [];
+  for (let j = 0; j < data.length; j++) {
+    const displayType = data[j].displayType;
+    if (!displayTypeArray.includes(displayType)) {
+      displayTypeArray.push(data[j].displayType);
+    }
+  }
+
+  for (let i = 0; i < displayTypeArray.length; i++) {
+    const listOfFilter = document.createElement("div");
+    listOfFilter.innerHTML = `
+        <input type="checkbox" id="${displayTypeArray[i]}" >
+        <label for="${displayTypeArray[i]}" id="${displayTypeArray[i]}">${displayTypeArray[i]}</label><br>
+            `;
+    displayTypeDiv.appendChild(listOfFilter);
+  }
+}
 //  !!!! -- ALL price  ARRAY IN LEFT CONTAINER --- !!!!
 
 function searchByPrice(event) {
@@ -254,7 +300,8 @@ const showByCategory = (event) => {
   }
   resultOfSearch(categoryArray);
   filterBrandFn();
-  storageTypeFn()
+  storageTypeFn();
+  displayType()
 };
 
 //  function to show searched Product
@@ -289,7 +336,16 @@ function searchProduct() {
   while (idFilterBrand.hasChildNodes()) {
     idFilterBrand.removeChild(idFilterBrand.firstChild);
   }
+  while (displayTypeDiv.hasChildNodes()) {
+    displayTypeDiv.removeChild(displayTypeDiv.firstChild);
+  }
+
+  while (storageDiv.hasChildNodes()) {
+    storageDiv.removeChild(storageDiv.firstChild);
+  }
   filterBrandFn();
+  storageTypeFn();
+  displayType();
   setTimeout(hideInputText, 3000);
 }
 //  ---- show one product ------
@@ -351,6 +407,7 @@ wrapper.addEventListener("click", showByCategory);
 searchBtn.addEventListener("click", searchProduct);
 price.addEventListener("click", searchByPrice);
 storageDiv.addEventListener("click", searchByStorageType);
+displayTypeDiv.addEventListener("click", searchByDisplayType);
 idFilterBrand.addEventListener("click", searchByBrand);
 
 result.addEventListener("click", function (event) {

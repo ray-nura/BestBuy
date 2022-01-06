@@ -1214,7 +1214,8 @@ export const getData = function () {
       "screenResolution": "1600 x 900",
       "touchScreen": true,
       "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6467/6467509cv11d.jpg",
-
+      "displayType": "Game Full HD",
+      "storageType": "Game SSD",
     },
     {
       "idProduct": 120,
@@ -1235,7 +1236,8 @@ export const getData = function () {
       "screenResolution": "1600 x 900",
       "touchScreen": true,
       "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6414/6414119_sd.jpg;maxHeight=640;maxWidth=550",
-
+      "displayType": "G Full HD",
+      "storageType": "GSSD",
     },
     {
       "idProduct": 121,
@@ -1256,7 +1258,8 @@ export const getData = function () {
       "screenResolution": "1600 x 900",
       "touchScreen": true,
       "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6352/6352703_sd.jpg;maxHeight=640;maxWidth=550",
-
+      "displayType": "GG Full HD",
+      "storageType": "GGSSD",
     },
   ]
 }
