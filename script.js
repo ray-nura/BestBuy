@@ -14,6 +14,7 @@ const storageDiv = document.querySelector('#storageType');
 const idProductClass = document.getElementsByClassName("idProduct");
 const product = document.querySelector(".product");
 const flashSale = document.querySelector(".winterHoliday");
+const year = document.querySelector("#year");
 
 
 //  clearing and refresh page
@@ -36,6 +37,10 @@ function refreshPage() {
   }
   while (displayTypeDiv.hasChildNodes()) {
     displayTypeDiv.removeChild(displayTypeDiv.firstChild);
+  }
+
+  while (year.hasChildNodes()) {
+    year.removeChild(year.firstChild);
   }
 
   let isAllCheck = false;
@@ -114,6 +119,56 @@ function searchByBrand(event) {
     result.removeChild(result.firstChild);
   }
   resultOfSearch(brandArray);
+}
+
+//SearchByYear
+function searchByYear() {
+  const dataYear = [];
+  for (let i = 0; i < data.length; i++) {
+    const year = data[i].year;
+    //console.log(typeof year)
+    //console.log(year)
+    if(!dataYear.includes (year)) {
+      dataYear.push(data[i].year);
+    }
+  }
+
+   let yearsOrder = dataYear;
+   yearsOrder.sort(function(a, b) {
+     return a - b
+   });
+  //  console.log(yearsOrder)
+  for (let i = 0; i < dataYear.length; i++) {
+    const listOfYear = document.createElement("div");
+    listOfYear.innerHTML = `
+        <input type="checkbox" id="${dataYear[i]}" >
+        <label for="${dataYear[i]}" id="${dataYear[i]}">${dataYear[i]}</label><br>
+            `;
+    year.appendChild(listOfYear);
+  }
+}
+
+function filterByYear(event) {
+  const item = event.target;
+  // console.log(item);
+  let yearArray = [];
+  for (let j = 0; j < idProductClass.length; j++) {
+    let idPrClass = idProductClass[j].innerText;
+    for (let i = 0; i < data.length; i++) {
+      // let brand = data[i].brand.toLowerCase();
+      let idPr = data[i].idProduct.toString();
+      let yearData = data[i].year.toString();
+
+      if (idPrClass === idPr && yearData === item.id) {
+         console.log(data[i].year);
+        yearArray.push(data[i]);
+      }
+    }
+  }
+  while (result.hasChildNodes()) {
+    result.removeChild(result.firstChild);
+  }
+  resultOfSearch(yearArray);
 }
 //  Nigina ------******
 function storageTypeFn() {
@@ -301,7 +356,8 @@ const showByCategory = (event) => {
   resultOfSearch(categoryArray);
   filterBrandFn();
   storageTypeFn();
-  displayType()
+  displayType();
+  searchByYear();
 };
 
 //  function to show searched Product
@@ -347,6 +403,7 @@ function searchProduct() {
   storageTypeFn();
   displayType();
   setTimeout(hideInputText, 3000);
+  searchByYear();
 }
 //  ---- show one product ------
 function showProduct(id) {
@@ -409,6 +466,8 @@ price.addEventListener("click", searchByPrice);
 storageDiv.addEventListener("click", searchByStorageType);
 displayTypeDiv.addEventListener("click", searchByDisplayType);
 idFilterBrand.addEventListener("click", searchByBrand);
+year.addEventListener("click", filterByYear);
+
 
 result.addEventListener("click", function (event) {
   const item = event.target;
