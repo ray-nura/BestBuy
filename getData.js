@@ -12,7 +12,7 @@ export const getData = function () {
       "type": "Curved", // Curved flat Smart
       "displayType": "Full HD", // Gulzat LED OLED HD 4K  4k-ULTRA-HP
       "screenSize": 32, // Talha 32-40-43-50-55-70-75-85
-      "color": "silver", // Talha  black, gold, gray, white
+      "color": "Silver", // Talha  black, gold, gray, white
       "storageType": "SSD",
       "storage": 256, // 512GB -1TB
       "memoryRAM": 8, // 4-16-32 GB
